@@ -1,4 +1,7 @@
 def fizzbuzz(value):
+    if type(value) != int:
+        raise TypeError("Se necesita un int y se recibio otra cosa")
+
     if value % 15 == 0:
         return "FizzBuzz"
     elif value % 3 == 0:
@@ -12,5 +15,7 @@ if __name__ == "__main__":
     for i in range(1, 101):
         print(fizzbuzz(i))
 
-
-    print(fizzbuzz("c"))
+    try:
+        print(fizzbuzz("c"))
+    except Exception as e:
+        print("Error:", e)

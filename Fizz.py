@@ -11,11 +11,3 @@ def fizzbuzz(value):
     else:
         return value
 
-if __name__ == "__main__":
-    for i in range(1, 101):
-        print(fizzbuzz(i))
-
-    try:
-        print(fizzbuzz("c"))
-    except Exception as e:
-        print("Error:", e)

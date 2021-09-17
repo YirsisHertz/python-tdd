@@ -41,3 +41,12 @@ def test_debeImprimirFizzBuzzEnMultiplosDe15(test_input, expected):
         )
 def test_debeImprimirElRestoDeNumerosTalCual(test_input, expected):
     assert fizzbuzz(test_input) == expected
+
+def test_debeLanzarExceptionSiSeMandanStrings():
+    with pytest.raises(TypeError):
+        fizzbuzz("f")
+    
+def test_debeLanzarExceptionSiSeMandanBoolean():
+    with pytest.raises(TypeError):
+        fizzbuzz(True)
+

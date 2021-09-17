@@ -31,3 +31,13 @@ def test_debeImprimirBuzzEnMultiplosDe5(test_input, expected):
         )
 def test_debeImprimirFizzBuzzEnMultiplosDe15(test_input, expected):
     assert fizzbuzz(test_input) == expected
+
+@pytest.mark.parametrize("test_input, expected", 
+        [
+            (1, 1), 
+            (2, 2), 
+            (4, 4), 
+            (7, 7)]
+        )
+def test_debeImprimirElRestoDeNumerosTalCual(test_input, expected):
+    assert fizzbuzz(test_input) == expected
